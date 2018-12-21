@@ -20,6 +20,11 @@ const routes: Routes = [
     canLoad: [AuthGuard]
   },
   {
+    path: 'admin',
+    loadChildren: './pages/admin/admin.module#AdminModule',
+    // canLoad: [AuthGuard]
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }
